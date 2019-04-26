@@ -1,0 +1,26 @@
+<app-navbar></app-navbar>
+<div class="card">
+  <div class="card-body">
+
+  <table class="table table-hover">
+    <thead>
+    <tr>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Ram</th>
+      <th>Description</th>
+      <th>Image</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let mobile of mobiles">
+      <td>{{mobile.name}}</td>
+      <td>{{mobile.price}}</td>
+      <td>{{mobile.ram}}</td>
+      <td>{{mobile.mobileDesc}}</td>
+      <td><img src="{{mobile.image}}" alt="..." style="widows: 200px;height: 200px;" ></td>
+      </tr>
+    </tbody>
+    </table>
+  </div>
+</div>

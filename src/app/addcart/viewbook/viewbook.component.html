@@ -1,0 +1,28 @@
+<app-user-navbar></app-user-navbar>
+
+<div class="card">
+  <div class="card-body">
+  <table class="table table-hover">
+    <thead>
+    <tr>
+      <th>Title</th>
+      <th>Price</th>
+      <th>Author</th>
+      <th>Description</th>
+      <th>Image</th>
+      <th>Add Cart</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let cart of carts">
+      <td>{{cart.title}}</td>
+      <td>{{cart.price}}</td>
+      <td>{{cart.author}}</td>
+      <td>{{cart.bookDesc}}</td>
+      <td><img src="{{cart.image}}" alt="..." style="widows: 200px;height: 200px;" ></td>
+      <td><button class="btn btn-danger" (click)="addCart(cart)">Add to Cart</button></td>
+      </tr>
+    </tbody>
+    </table>
+  </div>
+</div>

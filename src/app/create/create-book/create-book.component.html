@@ -1,0 +1,34 @@
+<app-admin-navbar></app-admin-navbar>
+<form name="model" (ngSubmit)="create()" #f="ngForm" >
+  <div class="form-group">
+    <label for="id">Id</label>
+    <input type="text" name="_id" [(ngModel)]="model._id"  class="form-control">
+  </div>
+  <div class="form-group">
+      <label for="id">Title</label>
+      <input type="text" name="title" [(ngModel)]="model.title"  class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="id">Price</label>
+      <input type="text" name="price" [(ngModel)]="model.price"  class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="id">Author</label>
+        <input type="text" name="author" [(ngModel)]="model.author"  class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="id">Book Description</label>
+        <input type="text" name="bookDesc" [(ngModel)]="model.bookDesc"  class="form-control">
+      </div>
+      <div class="form-group">
+        <button mat-stroked-button (click)="filePicker.click()">pick image</button>
+        <input type="file" #filePicker (change)="onFileSelected($event)">
+      </div>
+      <div class="image-preview" *ngIf="preview !== ''">
+        <img [src]="preview" alt="books">
+      </div>
+
+<input type="submit" value="Submit" class="btn btn-success">
+</form>
+<!-- <input type="file" (change)="onFileSelected($event)" name="filepic" [(ngModel)]="model.filepic"  class="form-control"> -->
+

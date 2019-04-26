@@ -1,0 +1,31 @@
+<app-admin-navbar></app-admin-navbar>
+<form name="model" (ngSubmit)="create()" #f="ngForm" >
+  <div class="form-group">
+    <label for="id">Id</label>
+    <input type="text" name="_id" [(ngModel)]="model._id"  class="form-control">
+  </div>
+  <div class="form-group">
+      <label for="id">Name</label>
+      <input type="text" name="name" [(ngModel)]="model.name"  class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="id">Price</label>
+      <input type="text" name="price" [(ngModel)]="model.price"  class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="id">RAM</label>
+        <input type="text" name="ram" [(ngModel)]="model.ram"  class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="id">Mobile Description</label>
+        <input type="text" name="mobileDesc" [(ngModel)]="model.mobileDesc"  class="form-control">
+      </div>
+      <div class="form-group">
+        <button mat-stroked-button (click)="filePicker.click()">pick image</button>
+        <input type="file" #filePicker (change)="onFileSelected($event)">
+      </div>
+      <div class="image-preview" *ngIf="preview !== ''">
+        <img [src]="preview" alt="mobiles">
+      </div>
+<input type="submit" value="Submit" class="btn btn-success">
+</form>

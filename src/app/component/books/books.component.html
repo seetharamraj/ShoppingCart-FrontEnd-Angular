@@ -1,0 +1,55 @@
+<app-navbar></app-navbar>
+<div class="card">
+  <div class="card-body">
+
+  <table class="table table-hover">
+    <thead>
+    <tr>
+      <th>Title</th>
+      <th>Price</th>
+      <th>Author</th>
+      <th>Description</th>
+      <th>Image</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let cart of carts">
+      <td>{{cart.title}}</td>
+      <td>{{cart.price}}</td>
+      <td>{{cart.author}}</td>
+      <td>{{cart.bookDesc}}</td>
+      <td><img src="{{cart.image}}" alt="..." style="widows: 200px;height: 200px;" ></td>
+    </tr>
+    </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- <mdb-carousel [isControls]="true" class="carousel-multi-item multi-animation" [type]="'carousel-multi-item'"
+  [animation]="'slide'">
+  <mdb-carousel-item *ngFor="let item of slides; let i = index">
+    <div class="col-md-4" [ngClass]="{'d-none d-md-block': cartIndex !== 0}" *ngFor="let cart of carts; let cartIndex = index">
+      <mdb-cart class="my-1">
+        <mdb-card-img [src]="cart.image" alt="carts image cap"></mdb-card-img>
+        <mdb-card-body>
+          <mdb-card-title>
+            <h4>{{cart.title}}</h4>
+          </mdb-card-ti>
+          <p>{{cart.price}}</p>
+          <mdb-card-title>
+              <h4>{{cart.title}}</h4>
+              <mdb-card-title>
+                  <h4>{{cart.title}}</h4>
+          <a href="#" mdbBtn color="primary" class="waves-light" mdbWavesEffect>{{cart.buttonText}}</a>
+        </mdb-card-body>
+      </mdb-card>
+    </div>
+  </mdb-carousel-item>
+</mdb-carousel> -->
+
+
+
+
+
+
+
